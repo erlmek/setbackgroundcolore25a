@@ -15,6 +15,22 @@ console.log(inpColorPicker)
 let bdy = document.querySelector("body");
 console.log(bdy);
 
+const pTags = document.getElementsByTagName('p')
+console.log(pTags)
+const pArray = Array.from(pTags)
+
+let glbFontSize = 20;
+
+function increaseFont(element) {
+    //debugger;  aktiverer debugger
+    element.style.fontSize = glbFontSize + "px";
+    glbFontSize += 2;
+    let fontSize = element.style.fontSize;
+    console.log(fontSize);
+}
+
+pArray.forEach(increaseFont);
+
 function setBackground() {
     let col = inp.value;
     console.log(col);
